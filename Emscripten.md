@@ -16,8 +16,11 @@ int add(int a, int b) {
 EMSCRIPTEN_KEEPALIVE
 int mul(int a, int b) {
     return a * b;
-}```
+}
+```
 
+
+Compile C code to WASM:
 
 ```
 emcc add.c -o add2.wasm -O3
@@ -29,6 +32,8 @@ Create a file `module.mjs`
 import * as example from './add2.wasm';
 console.log(example.add(8, 5));
 ```
+
+Run:
 
 ```
 node --experimental-modules --experimental-wasm-modules module.mjs
