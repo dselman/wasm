@@ -3,6 +3,9 @@
 Spec (Design Goals):
 https://webassembly.github.io/spec/core/intro/introduction.html#design-goals
 
+AngryBots (Unity game compiled to WASM):
+https://files.unity3d.com/jonas/AngryBots/
+
 Introduction:
 https://nxxm.github.io/cppcon2018/CPP_EVERYWHERE_WITH_WASM.html
 
