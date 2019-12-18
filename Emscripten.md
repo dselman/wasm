@@ -6,18 +6,21 @@ https://emscripten.org
 Create a file `add.c`
 
 ```
+#include "emscripten.h"
+
+EMSCRIPTEN_KEEPALIVE
 int add(int a, int b) {
   return a + b;
 }
 
+EMSCRIPTEN_KEEPALIVE
 int mul(int a, int b) {
     return a * b;
-}
-```
+}```
 
 
 ```
-emcc add.c -o add2.wasm -O3 -s EXPORTED_FUNCTIONS=['_add']
+emcc add.c -o add2.wasm -O3
 ```
 
 Create a file `module.mjs`
